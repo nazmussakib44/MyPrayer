@@ -2,17 +2,22 @@ import { StyleSheet } from "react-native";
 
 const SehriIftarStyles = StyleSheet.create({
   Container: {
-    width: "90%", marginTop: "5%", backgroundColor: "#645452"
+    width: "90%",
+    marginTop: "5%",
+    backgroundColor: "#645452",
   },
   CardContent: {
     justifyContent: "center",
     alignItems: "center",
   },
   HeaderText: {
-    color: "#FFF", fontSize: 20,  fontWeight: "bold"
+    color: "#FFF",
+    fontSize: 20,
+    fontWeight: "bold",
   },
   BodyWrapper: {
-    marginTop:'5%', marginBottom:20
+    marginTop: "5%",
+    marginBottom: 20,
   },
   BodyItemWrapper: {
     flexDirection: "row",
@@ -21,14 +26,14 @@ const SehriIftarStyles = StyleSheet.create({
     alignItems: "center",
   },
   BodyItemLeft: {
-    fontSize: 18, color: "#FFF"
+    fontSize: 18,
+    color: "#FFF",
   },
   BodyItemRight: {
-    fontSize: 18, fontWeight: "bold"
+    fontSize: 18,
+    fontWeight: "bold",
   },
-  BottomText: {
-
-  },
+  BottomText: {},
 });
 
 export default SehriIftarStyles;
