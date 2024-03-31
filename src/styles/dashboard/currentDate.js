@@ -4,9 +4,9 @@ const CurrentDateStyles = StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
-    marginTop: 70,
+    marginTop: '15%',
   },
-  text: {fontSize: 20, marginLeft: 10},
+  text: {fontSize: 20, marginLeft: '2%'},
   icon: {
     source: 'alarm-bell',
     color: '#FFF',

@@ -1,10 +1,12 @@
 import * as React from "react";
 import { BottomNavigation } from "react-native-paper";
+import { NavigationContainer } from "@react-navigation/native";
 import NavigationStyles from "../styles/navigation/navigation";
 import DashboardScreen from "./dashboard";
 import QuranScreen from "./quran";
 import HadithScreen from "./hadith";
 import TrackerScreen from "./tracker";
+import { SafeAreaView, View, Button } from "react-native";
 
 const BottomNav = () => {
   const [index, setIndex] = React.useState(0);
@@ -27,6 +29,7 @@ const BottomNav = () => {
     prayer_tracker: TrackerScreen,
   });
   return (
+
     <BottomNavigation
       activeColor={NavigationStyles.activeColor}
       inactiveColor={NavigationStyles.inactiveColor}
@@ -37,6 +40,7 @@ const BottomNav = () => {
       onIndexChange={setIndex}
       renderScene={renderScene}
     />
+
   );
 };
 
