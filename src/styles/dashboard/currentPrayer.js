@@ -24,6 +24,7 @@ const CurrentPrayerStyles = StyleSheet.create({
   },
   BottomText: {
     textAlign: "right",
+    color: '#FFF',
     marginTop: "5%",
     fontWeight: "bold",
   },

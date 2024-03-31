@@ -5,7 +5,7 @@ const NavigationStyles = StyleSheet.create({
     backgroundColor: "#FFF",
   },
   activeColor: '#FE6F5E',
-  inactiveColor: '#8A3324',
+  inactiveColor: '#645452',
   animationType: 'opacity'
 });
 
