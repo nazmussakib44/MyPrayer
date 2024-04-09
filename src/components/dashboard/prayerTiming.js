@@ -1,5 +1,5 @@
 import * as React from "react";
-import { SafeAreaView, FlatList } from "react-native";
+import { View, SafeAreaView, FlatList } from "react-native";
 import { Card, Text } from "react-native-paper";
 import TimingContent from "./timingContent";
 import PrayTimingStyles from "../../styles/dashboard/prayTiming";
@@ -22,6 +22,7 @@ const PrayerTiming = () => {
             data={prayerData}
             renderItem={TimingContent}
             keyExtractor={(item) => item.id}
+            nestedScrollEnabled={false}
           />
         </SafeAreaView>
       </Card.Content>
