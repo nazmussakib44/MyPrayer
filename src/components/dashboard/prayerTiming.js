@@ -18,7 +18,7 @@ const PrayerTiming = () => {
       <Card.Content style={PrayTimingStyles.CardContent}>
         <Text style={PrayTimingStyles.HeaderText}>Pray Times</Text>
         <SafeAreaView style={PrayTimingStyles.ListContainer}>
-          <TimingContent />
+          <TimingContent item={prayerData} />
         </SafeAreaView>
       </Card.Content>
     </Card>
