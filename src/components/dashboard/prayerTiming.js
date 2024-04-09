@@ -18,12 +18,7 @@ const PrayerTiming = () => {
       <Card.Content style={PrayTimingStyles.CardContent}>
         <Text style={PrayTimingStyles.HeaderText}>Pray Times</Text>
         <SafeAreaView style={PrayTimingStyles.ListContainer}>
-          <FlatList
-            data={prayerData}
-            renderItem={TimingContent}
-            keyExtractor={(item) => item.id}
-            nestedScrollEnabled={false}
-          />
+          <TimingContent />
         </SafeAreaView>
       </Card.Content>
     </Card>
