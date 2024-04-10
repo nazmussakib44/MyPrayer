@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux';
-import itemReducer from './itemStore/reducers';
-import loaderReducer from './loaderStore/reducers';
 
-const rootReducer = combineReducers({
-  items: itemReducer,
-  loader: loaderReducer,
-});
+import { configureStore } from '@reduxjs/toolkit'
+import prayerReducer from './Prayer/reducers';
 
-export default rootReducer;
+export default configureStore({
+  reducer: {
+    prayer: prayerReducer
+  },
+})

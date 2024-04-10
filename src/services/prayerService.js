@@ -10,7 +10,7 @@ const service = axios.create({
 export const fetchPrayTimes = async (location, date) => {
   try {
     const response = await service.get(`/timingsByAddress?address=${location}&date=${date}&school=1`);
-    return response.data;
+    return response.data.data;
   } catch (error) {
     throw error;
   }

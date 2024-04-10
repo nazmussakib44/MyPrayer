@@ -1,17 +1,12 @@
 import * as React from "react";
+import { useSelector } from 'react-redux';
 import { View, SafeAreaView, FlatList } from "react-native";
 import { Card, Text } from "react-native-paper";
 import TimingContent from "./timingContent";
 import PrayTimingStyles from "../../styles/dashboard/prayTiming";
 
 const PrayerTiming = () => {
-  const prayerData = [
-    { id: "1", name: "Fazr", time: "04:36 AM" },
-    { id: "2", name: "Duhr", time: "12:06 AM" },
-    { id: "4", name: "Asar", time: "12:06 AM" },
-    { id: "5", name: "Magrib", time: "12:06 AM" },
-    { id: "6", name: "Isha", time: "12:06 AM" },
-  ];
+  const prayerData = useSelector(state => state.prayer.pray_times);
 
   return (
     <Card style={PrayTimingStyles.Container}>
