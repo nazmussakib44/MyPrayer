@@ -10,11 +10,10 @@ export const fetchPrayerTimesSuccess = item => ({
 
 export const fetchPrayerTimes = () => {
   return async dispatch => {
-    console.log('here...');
     // dispatch(setLoading(true));
     try {
-      const prayerTimes = await fetchPrayTimes('Dhaka', '10-04-2024'); 
-      // console.log(prayerTimes);
+      const prayerTimes = await fetchPrayTimes('Sudbury', '28-04-2025'); 
+      console.log(prayerTimes);
       dispatch(fetchPrayerTimesSuccess(prayerTimes));
     } catch (error) {
       console.error('Error fetching prayer times: ', error);
@@ -23,15 +22,3 @@ export const fetchPrayerTimes = () => {
     }
   };
 };
-
-// export function fetchPrayerTimes() {
-//   return function(dispatch) {
-//       return fetchPrayTimes().then(r => {
-//         const postid = ['ok', 'hello'];
-//         dispatch({
-//           type: FETCH_PRAYER_TIMES_SUCCESS,
-//           postId
-//       });
-//       });
-//   };
-// }

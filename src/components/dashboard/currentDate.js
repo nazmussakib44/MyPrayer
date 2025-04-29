@@ -10,8 +10,9 @@ const CurrentDate = () => {
 
   return (
     <View style={CurrentDateStyles.container}>
-      <Icon source={CurrentDateStyles.icon.source} color={CurrentDateStyles.icon.color} size={CurrentDateStyles.icon.size} />
+      {/* <Icon source={CurrentDateStyles.icon.source} color={CurrentDateStyles.icon.color} size={CurrentDateStyles.icon.size} /> */}
       <Text style={CurrentDateStyles.text}>{currentDate}</Text>
+      <Text style={{textAlign:"center", color: '#F08080'}}>London</Text>
     </View>
   );
 };
