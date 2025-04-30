@@ -1,7 +1,8 @@
 import * as React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ScrollView, SafeAreaView, View, Button, Text } from "react-native";
+import { ScrollView, View, Button, Text } from "react-native";
+import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
 import CurrentDate from "../components/dashboard/currentDate";
 import CurrentPrayer from "../components/dashboard/currentPrayer";
 import SehriIftar from "../components/dashboard/sehriIftar";
@@ -11,13 +12,14 @@ import { fetchPrayerTimes } from "../store/Prayer/actions";
 import Logo from "../components/logo";
 
 const DashboardScreen = ({ store }) => {
+  const insets = useSafeAreaInsets();
+
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchPrayerTimes());
   }, []);
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <View style={DashboardStyles.container}>
+    <SafeAreaView style={[DashboardStyles.container, { paddingTop: insets.top - 50 || 20 }]}>
         <View style={DashboardStyles.headerContainer}>
           {/* Left Side - Logo and Subtitle */}
           <View style={DashboardStyles.logoContainer}>
@@ -39,7 +41,6 @@ const DashboardScreen = ({ store }) => {
             <PrayerTiming />
           </ScrollView>
         </View>
-      </View>
     </SafeAreaView>
   );
 };

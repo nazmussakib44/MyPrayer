@@ -5,8 +5,7 @@ import NavigationStyles from "../styles/navigation/navigation";
 import DashboardScreen from "./dashboard";
 import QuranScreen from "./quran";
 import HadithScreen from "./hadith";
-import TrackerScreen from "./tracker";
-import { SafeAreaView, View, Button } from "react-native";
+import SettingsScreen from "./settings";
 
 const BottomNav = () => {
   const [index, setIndex] = React.useState(0);
@@ -19,14 +18,14 @@ const BottomNav = () => {
     },
     { key: "quran", title: "Quran", focusedIcon: "album" },
     { key: "hadith", title: "Hadith", focusedIcon: "history" },
-    { key: "prayer_tracker", title: "Tracker", focusedIcon: "history" },
+    { key: "settings", title: "Settings", focusedIcon: "history" },
   ]);
 
   const renderScene = BottomNavigation.SceneMap({
     dashboard: DashboardScreen,
     quran: QuranScreen,
     hadith: HadithScreen,
-    prayer_tracker: TrackerScreen,
+    settings: SettingsScreen,
   });
   return (
 

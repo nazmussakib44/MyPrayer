@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 const PrayTimingStyles = StyleSheet.create({
   Container: {
     width: "90%",
-    marginTop: "5%",
+    marginTop: "2%",
     backgroundColor: "#FFF",
     marginBottom: "30%",
   },
