@@ -30,7 +30,8 @@
       },
       "entitlements": {
         "com.apple.developer.aps-environment": "development"
-      }
+      },
+      "jsEngine": "hermes"
     },
     "android": {
       "adaptiveIcon": {
@@ -47,7 +48,7 @@
         "VIBRATE",
         "com.google.android.gms.permission.ACTIVITY_RECOGNITION"
       ],
-      "googleServicesFile": "./google-services.json"
+      "jsEngine": "hermes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -61,24 +62,11 @@
         }
       ],
       [
-        "expo-notifications",
-        {
-          "icon": "./assets/notification-icon.png",
-          "color": "#f2777b",
-          "sounds": ["./assets/adhan-sound.wav"]
-        }
-      ],
-      [
         "expo-splash-screen",
         {
           "backgroundColor": "#f8f8f8"
         }
       ]
-    ],
-    "extra": {
-      "eas": {
-        "projectId": "your-project-id-here"
-      }
-    }
+    ]
   }
 }

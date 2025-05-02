@@ -48,7 +48,7 @@ const CurrentPrayer = () => {
           {prayerInfo.prayer || "Fajr"}
         </Text>
         <Text style={CurrentPrayerStyles.BottomText}>
-          {prayerInfo.remaining_time != 0 && (
+          {!prayerInfo.is_in_buffer && (
             <>
               {prayerInfo.remaining_time}
               {" remaining"}
